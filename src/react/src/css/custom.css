@@ -5,36 +5,82 @@
  */
 
 /* You can override the default Infima variables here. */
+/* Magenta365 Theme - Light Mode */
 :root {
-  --ifm-color-primary: #4b74f0;
-  --ifm-color-primary-dark: #2e4485;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary Magenta Color Palette */
+  --ifm-color-primary: #e20074;
+  --ifm-color-primary-dark: #b5005d;
+  --ifm-color-primary-darker: #880046;
+  --ifm-color-primary-darkest: #6b0036;
+  --ifm-color-primary-light: #e83390;
+  --ifm-color-primary-lighter: #ee66ac;
+  --ifm-color-primary-lightest: #f9cce3;
+
+  /* Secondary Colors */
+  --ifm-color-secondary: #000;
+  --ifm-color-secondary-light: #414141;
+  --ifm-color-secondary-lighter: #616161;
+
+  /* Neutral Colors */
+  --ifm-color-neutral-100: #f1f1f1;
+  --ifm-color-neutral-200: #ddd;
+  --ifm-color-neutral-300: #cacaca;
+  --ifm-color-neutral-400: #b6b6b6;
+  --ifm-color-neutral-500: #a3a3a3;
+  --ifm-color-neutral-600: #828282;
+  --ifm-color-neutral-700: #616161;
+  --ifm-color-neutral-800: #414141;
+  --ifm-color-neutral-900: #202020;
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(226, 0, 116, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #3092fa;
-  --ifm-color-primary-dark: #2679d1;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Magenta365 Theme - Dark Mode */
+[data-theme="dark"] {
+  /* Primary Magenta Color Palette */
+  --ifm-color-primary: #ee66ac;
+  --ifm-color-primary-dark: #e83390;
+  --ifm-color-primary-darker: #e20074;
+  --ifm-color-primary-darkest: #b5005d;
+  --ifm-color-primary-light: #f9cce3;
+  --ifm-color-primary-lighter: #fce8f3;
+  --ifm-color-primary-lightest: #fff5fb;
+
+  /* Secondary Colors - Inverted for dark mode */
+  --ifm-color-secondary: #fff;
+  --ifm-color-secondary-light: #f1f1f1;
+  --ifm-color-secondary-lighter: #ddd;
+
+  /* Neutral Colors - Inverted for dark mode */
+  --ifm-color-neutral-100: #202020;
+  --ifm-color-neutral-200: #414141;
+  --ifm-color-neutral-300: #616161;
+  --ifm-color-neutral-400: #828282;
+  --ifm-color-neutral-500: #a3a3a3;
+  --ifm-color-neutral-600: #b6b6b6;
+  --ifm-color-neutral-700: #cacaca;
+  --ifm-color-neutral-800: #ddd;
+  --ifm-color-neutral-900: #f1f1f1;
+
+  --docusaurus-highlighted-code-line-bg: rgba(238, 102, 172, 0.2);
 }
 
 .button {
-  background-color: #0078d4;
+  background-color: #e20074;
+}
+
+.button:hover {
+  background-color: #e83390;
 }
 
 .button--secondary {
-  background-color: #ffb900;
+  background-color: #000;
+}
+
+.button--secondary:hover {
+  background-color: #414141;
 }
 
 .text-image-pair {
@@ -59,8 +105,6 @@
   text-align: center;
 }
 
-
-
 .hero-banner {
   display: flex;
   color: #fff;
@@ -69,13 +113,15 @@
   position: relative;
   overflow: hidden;
   border-radius: 3px;
-  border: 1px solid #0078d4;
-  background: #0078d4;
-  box-shadow: 0px 0px 2px 0px rgba(23, 26, 31, 0.12), 0px 0px 1px 0px rgba(23, 26, 31, 0.07);
+  border: 1px solid #e20074;
+  background: #e20074;
+  box-shadow: 0px 0px 2px 0px rgba(23, 26, 31, 0.12),
+    0px 0px 1px 0px rgba(23, 26, 31, 0.07);
 }
 
 .hero-banner-guide {
-  background: #993E15;
+  background: #b5005d;
+  border-color: #b5005d;
 }
 
 /* Content inside the hero banner */
@@ -129,15 +175,11 @@
   object-fit: contain;
 }
 
-
 .hero-image img {
   max-height: 75%;
   max-width: 50%;
   object-fit: contain;
 }
-
-
-
 
 /* General layout container */
 .content-rows {
@@ -204,7 +246,6 @@
 
 /* Responsive layout for small screens */
 @media (max-width: 768px) {
-
   /* Image and text containers take 100% of the width on mobile */
   .image-first .image-container,
   .text-first .image-container,
@@ -295,8 +336,6 @@
   margin-top: auto;
   /* Ensures the button is pushed to the bottom */
 }
-
-
 
 .buttonPad {
   margin-left: 2rem;
