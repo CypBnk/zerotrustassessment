@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Custom attributes for Magenta365 project
+Magenta365_changes/*
