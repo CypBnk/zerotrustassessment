@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    Mandatory Labeling Enabled for Sensitivity Labels
+    Mandatory labeling is enabled in sensitivity label policies
 #>
 
 function Test-Assessment-35016 {
@@ -13,7 +13,7 @@ function Test-Assessment-35016 {
         SfiPillar = 'Protect tenants and production systems',
         TenantType = ('Workforce','External'),
         TestId = 35016,
-        Title = 'Mandatory labeling enabled for sensitivity labels',
+        Title = 'Mandatory labeling is enabled in sensitivity label policies',
         UserImpact = 'High'
     )]
     [CmdletBinding()]
@@ -29,7 +29,7 @@ function Test-Assessment-35016 {
     $enabledPolicies = @()
 
     try {
-        $enabledPolicies = Get-LabelPolicy -ErrorAction Stop | Where-Object { $_.Enabled -eq $true }
+        $enabledPolicies = Get-LabelPolicy -WarningAction SilentlyContinue -ErrorAction Stop | Where-Object { $_.Enabled -eq $true }
     }
     catch {
         $errorMsg = $_
