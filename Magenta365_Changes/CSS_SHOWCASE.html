@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom CSS Showcase - Zero Trust Assessment (Magenta365)</title>
+    <style>
+      /* Custom CSS from custom.css - Magenta365 Theme */
+      :root {
+        --ifm-color-primary: #e20074;
+        --ifm-color-primary-dark: #b5005d;
+        --ifm-color-primary-darker: #880046;
+        --ifm-color-primary-darkest: #6b0036;
+        --ifm-color-primary-light: #e83390;
+        --ifm-color-primary-lighter: #ee66ac;
+        --ifm-color-primary-lightest: #f9cce3;
+        --ifm-color-secondary: #000;
+        --ifm-color-secondary-light: #414141;
+        --ifm-color-secondary-lighter: #616161;
+        --ifm-color-neutral-100: #f1f1f1;
+        --ifm-color-neutral-200: #ddd;
+        --ifm-color-neutral-300: #cacaca;
+        --ifm-color-neutral-400: #b6b6b6;
+        --ifm-color-neutral-500: #a3a3a3;
+        --ifm-color-neutral-600: #828282;
+        --ifm-color-neutral-700: #616161;
+        --ifm-color-neutral-800: #414141;
+        --ifm-color-neutral-900: #202020;
+        --ifm-code-font-size: 95%;
+        --docusaurus-highlighted-code-line-bg: rgba(226, 0, 116, 0.1);
+      }
+
+      [data-theme="dark"] {
+        --ifm-color-primary: #ee66ac;
+        --ifm-color-primary-dark: #e83390;
+        --ifm-color-primary-darker: #e20074;
+        --ifm-color-primary-darkest: #b5005d;
+        --ifm-color-primary-light: #f9cce3;
+        --ifm-color-primary-lighter: #fce8f3;
+        --ifm-color-primary-lightest: #fff5fb;
+        --ifm-color-secondary: #fff;
+        --ifm-color-secondary-light: #f1f1f1;
+        --ifm-color-secondary-lighter: #ddd;
+        --ifm-color-neutral-100: #202020;
+        --ifm-color-neutral-200: #414141;
+        --ifm-color-neutral-300: #616161;
+        --ifm-color-neutral-400: #828282;
+        --ifm-color-neutral-500: #a3a3a3;
+        --ifm-color-neutral-600: #b6b6b6;
+        --ifm-color-neutral-700: #cacaca;
+        --ifm-color-neutral-800: #ddd;
+        --ifm-color-neutral-900: #f1f1f1;
+        --docusaurus-highlighted-code-line-bg: rgba(238, 102, 172, 0.2);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      header {
+        background: linear-gradient(135deg, #e20074 0%, #b5005d 100%);
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .showcase-section {
+        margin: 40px 0;
+        padding: 30px;
+        border-radius: 8px;
+        background: #f9f9f9;
+      }
+
+      .showcase-section h2 {
+        color: var(--ifm-color-primary);
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        border-left: 4px solid var(--ifm-color-primary);
+        padding-left: 15px;
+      }
+
+      .showcase-section h3 {
+        color: var(--ifm-color-primary-dark);
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+      }
+
+      /* Button Styles */
+      .button {
+        background-color: #e20074;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+        margin: 5px;
+      }
+
+      .button:hover {
+        background-color: #e83390;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .button--secondary {
+        background-color: #000;
+        color: #fff;
+      }
+
+      .button--secondary:hover {
+        background-color: #414141;
+      }
+
+      .button-group {
+        margin: 20px 0;
+      }
+
+      /* Text Image Pair */
+      .text-image-pair {
+        display: flex;
+        align-items: center;
+        background-color: rgb(244, 241, 241);
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 20px 0;
+      }
+
+      .text-image-pair p {
+        align-self: self-start;
+        width: 55%;
+        padding-right: 20px;
+        padding: 20px;
+        font-size: 1rem;
+      }
+
+      .text-image-pair img {
+        width: 40vw;
+        padding-right: 5px;
+        max-width: 300px;
+        height: auto;
+      }
+
+      /* Hero Banner */
+      .hero-banner {
+        display: flex;
+        color: #fff;
+        padding: 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 3px;
+        border: 1px solid #e20074;
+        background: #e20074;
+        box-shadow: 0px 0px 2px 0px rgba(23, 26, 31, 0.12),
+          0px 0px 1px 0px rgba(23, 26, 31, 0.07);
+        min-height: 250px;
+        margin: 20px 0;
+      }
+
+      .hero-banner-guide {
+        background: #b5005d;
+        border-color: #b5005d;
+      }
+
+      .hero-content {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .hero-text {
+        padding: 0 0 0 6rem;
+        text-align: left;
+        flex: 1;
+      }
+
+      .hero-text h1 {
+        font-size: 34px;
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+
+      .hero-text p {
+        font-size: 1.2rem;
+        color: #f7f7f7;
+        padding: 0 2rem 0 0;
+        line-height: 32px;
+      }
+
+      .hero-image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .hero-image-left {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        max-width: 35vw;
+      }
+
+      .hero-image-left img,
+      .hero-image img {
+        max-width: 75%;
+        max-height: 75%;
+        object-fit: contain;
+      }
+
+      /* Content Rows */
+      .content-rows {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .row-section {
+        padding: 20px 0;
+      }
+
+      .even-row {
+        background-color: #f0f0f0;
+      }
+
+      .row-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .image-first .image-container,
+      .text-first .image-container {
+        width: 50%;
+      }
+
+      .image-first .text-container,
+      .text-first .text-container {
+        width: 50%;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 4rem;
+      }
+
+      .text-container {
+        padding: 2rem;
+      }
+
+      .text-container h2 {
+        margin-bottom: 2rem;
+        color: var(--ifm-color-primary);
+      }
+
+      .text-container p {
+        font-size: large;
+      }
+
+      /* Section Layout */
+      .section {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 20px 0;
+      }
+
+      .sub-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 30%;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: white;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .sub-section:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .sub-section img {
+        align-content: center;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .content {
+        flex-grow: 1;
+      }
+
+      .content h2,
+      .content h3 {
+        text-align: center;
+        flex-grow: 1;
+        color: var(--ifm-color-primary);
+      }
+
+      .content p {
+        margin-bottom: 10px;
+        font-size: large;
+      }
+
+      .action-button {
+        align-self: center;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: auto;
+        background-color: #e20074;
+        padding: 10px 20px;
+      }
+
+      .buttonPad {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+
+      .video-container {
+        padding: 1rem;
+        background: #f0f0f0;
+        border-radius: 8px;
+        margin: 20px 0;
+        aspect-ratio: 16 / 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+        font-size: 1.2rem;
+      }
+
+      /* Testimonial Image */
+      .testimonial-image {
+        width: 80vw;
+        text-align: center;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 968px) {
+        .section {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .sub-section {
+          width: 95%;
+        }
+
+        .hero-image,
+        .hero-image-left {
+          display: none;
+        }
+
+        .hero-text {
+          padding: 0 2rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .image-first .image-container,
+        .text-first .image-container,
+        .image-first .text-container,
+        .text-first .text-container {
+          width: 100%;
+        }
+
+        .row-content {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        header h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero-text {
+          padding: 0 1rem;
+        }
+
+        .hero-text h1 {
+          font-size: 24px;
+        }
+
+        .hero-text p {
+          font-size: 1rem;
+          padding: 0;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        .container {
+          max-width: 90%;
+        }
+      }
+
+      /* Demo placeholder image */
+      .demo-placeholder {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+        font-size: 1rem;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 60px;
+      }
+
+      footer p {
+        margin: 5px 0;
+      }
+
+      code {
+        background: #f4f4f4;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+        font-size: var(--ifm-code-font-size);
+      }
+
+      pre {
+        background: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        margin: 15px 0;
+      }
+
+      pre code {
+        background: none;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>🎨 Custom CSS Showcase</h1>
+        <p>Zero Trust Assessment - CSS Components & Styling Reference</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Color Variables Section -->
+      <section class="showcase-section">
+        <h2>Color Palette</h2>
+        <p>
+          The custom CSS defines a comprehensive color palette using CSS
+          variables for light and dark themes.
+        </p>
+
+        <h3>Primary Colors (Light Theme)</h3>
+        <div class="section">
+          <div class="sub-section">
+            <div
+              style="
+                background: #e20074;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+              "
+            ></div>
+            <p style="text-align: center; margin-top: 10px">
+              <strong>Primary</strong><br />#e20074
+            </p>
+          </div>
+          <div class="sub-section">
+            <div
+              style="
+                background: #b5005d;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+              "
+            ></div>
+            <p style="text-align: center; margin-top: 10px">
+              <strong>Primary Dark</strong><br />#b5005d
+            </p>
+          </div>
+          <div class="sub-section">
+            <div
+              style="
+                background: #33925d;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+              "
+            ></div>
+            <p style="text-align: center; margin-top: 10px">
+              <strong>Primary Light</strong><br />#33925d
+            </p>
+          </div>
+        </div>
+
+        <h3>Primary Colors (Dark Theme)</h3>
+        <div class="section">
+          <div class="sub-section">
+            <div
+              style="
+                background: #3092fa;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+              "
+            ></div>
+            <p style="text-align: center; margin-top: 10px">
+              <strong>Primary</strong><br />#3092fa
+            </p>
+          </div>
+          <div class="sub-section">
+            <div
+              style="
+                background: #2679d1;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+              "
+            ></div>
+            <p style="text-align: center; margin-top: 10px">
+              <strong>Primary Dark</strong><br />#2679d1
+            </p>
+          </div>
+          <div class="sub-section">
+            <div
+              style="
+                background: #29d5b0;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+              "
+            ></div>
+            <p style="text-align: center; margin-top: 10px">
+              <strong>Primary Light</strong><br />#29d5b0
+            </p>
+          </div>
+        </div>
+
+        <h3>Accent Colors</h3>
+        <div class="section">
+          <div class="sub-section">
+            <div
+              style="
+                background: #e20074;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+              "
+            ></div>
+            <p style="text-align: center; margin-top: 10px">
+              <strong>Button Primary</strong><br />#e20074
+            </p>
+          </div>
+          <div class="sub-section">
+            <div
+              style="
+                background: #000;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+              "
+            ></div>
+            <p style="text-align: center; margin-top: 10px">
+              <strong>Button Secondary</strong><br />#000
+            </p>
+          </div>
+          <div class="sub-section">
+            <div
+              style="
+                background: #b5005d;
+                width: 100%;
+                height: 100px;
+                border-radius: 8px;
+              "
+            ></div>
+            <p style="text-align: center; margin-top: 10px">
+              <strong>Guide Banner</strong><br />#B5005D
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buttons Section -->
+      <section class="showcase-section">
+        <h2>Button Components</h2>
+        <p>
+          Buttons are key interactive elements in the interface. Two styles are
+          available: primary (blue) and secondary (gold).
+        </p>
+
+        <h3>Primary Button</h3>
+        <div class="button-group">
+          <button class="button">Primary Button</button>
+          <button class="button">Hover Effect ↑</button>
+          <button class="button">Click Me</button>
+        </div>
+
+        <h3>Secondary Button</h3>
+        <div class="button-group">
+          <button class="button button--secondary">Secondary Button</button>
+          <button class="button button--secondary">Hover Effect ↑</button>
+          <button class="button button--secondary">Action</button>
+        </div>
+
+        <h3>Button with Padding</h3>
+        <div class="button-group buttonPad">
+          <button class="button">Padded Button</button>
+          <button class="button button--secondary">Padded Action</button>
+        </div>
+      </section>
+
+      <!-- Hero Banner Section -->
+      <section class="showcase-section">
+        <h2>Hero Banners</h2>
+        <p>
+          Eye-catching banner components used for important content and
+          messaging.
+        </p>
+
+        <h3>Standard Hero Banner</h3>
+        <div class="hero-banner">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1>Welcome to Zero Trust</h1>
+              <p>
+                Comprehensive security posture evaluation for your Microsoft 365
+                tenant
+              </p>
+            </div>
+            <div class="hero-image">
+              <div class="demo-placeholder">Image Here</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Guide Hero Banner</h3>
+        <div class="hero-banner hero-banner-guide">
+          <div class="hero-content">
+            <div class="hero-image-left">
+              <div class="demo-placeholder">Image Here</div>
+            </div>
+            <div class="hero-text">
+              <h1>Implementation Guide</h1>
+              <p>
+                Step-by-step instructions for deploying Zero Trust security
+                across your organization
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Layouts Section -->
+      <section class="showcase-section">
+        <h2>Content Layout Patterns</h2>
+        <p>
+          Various layout patterns for displaying content with images and text.
+        </p>
+
+        <h3>Text-Image Pair Layout</h3>
+        <div class="text-image-pair">
+          <p>
+            <strong>Key Feature:</strong><br />
+            This layout combines text on the left with an image on the right.
+            Perfect for highlighting features, benefits, or important
+            information with visual support.
+          </p>
+          <div class="demo-placeholder" style="width: 40%; margin: 0">
+            Image
+          </div>
+        </div>
+
+        <h3>Row Content - Image First</h3>
+        <div class="row-section">
+          <div class="row-content image-first">
+            <div class="image-container">
+              <div class="demo-placeholder">Visual Content</div>
+            </div>
+            <div class="text-container">
+              <h2>Image on Left</h2>
+              <p>
+                This layout displays an image on the left side with explanatory
+                text on the right. It's effective for showcasing features,
+                screenshots, or diagrams alongside descriptions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Row Content - Text First (Even Row)</h3>
+        <div class="row-section even-row">
+          <div class="row-content text-first">
+            <div class="text-container">
+              <h2>Image on Right</h2>
+              <p>
+                This alternating layout places text on the left with an image on
+                the right. Use this pattern to create visual rhythm and keep
+                content engaging across multiple sections.
+              </p>
+            </div>
+            <div class="image-container">
+              <div class="demo-placeholder">Visual Content</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Layout -->
+      <section class="showcase-section">
+        <h2>Multi-Column Sections</h2>
+        <p>
+          Display content in organized subsections with equal-width columns.
+        </p>
+
+        <div class="section">
+          <div class="sub-section">
+            <div
+              class="demo-placeholder"
+              style="height: 200px; margin-bottom: 20px"
+            >
+              Icon/Image
+            </div>
+            <h3>Feature One</h3>
+            <p>
+              Description of the first feature or benefit. This layout is
+              perfect for showcasing multiple related items in a grid format.
+            </p>
+            <button class="action-button" style="margin-top: 20px">
+              Learn More
+            </button>
+          </div>
+          <div class="sub-section">
+            <div
+              class="demo-placeholder"
+              style="height: 200px; margin-bottom: 20px"
+            >
+              Icon/Image
+            </div>
+            <h3>Feature Two</h3>
+            <p>
+              Description of the second feature or benefit. Each subsection can
+              contain text, images, and interactive elements.
+            </p>
+            <button class="action-button" style="margin-top: 20px">
+              Learn More
+            </button>
+          </div>
+          <div class="sub-section">
+            <div
+              class="demo-placeholder"
+              style="height: 200px; margin-bottom: 20px"
+            >
+              Icon/Image
+            </div>
+            <h3>Feature Three</h3>
+            <p>
+              Description of the third feature or benefit. The layout is
+              responsive and adapts to smaller screens automatically.
+            </p>
+            <button class="action-button" style="margin-top: 20px">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Container Section -->
+      <section class="showcase-section">
+        <h2>Media Containers</h2>
+        <p>Containers designed for embedding videos and other media content.</p>
+
+        <h3>Video Container (16:9 Aspect Ratio)</h3>
+        <div class="video-container">📺 Video Player (Placeholder)</div>
+
+        <h3>Testimonial Image</h3>
+        <div class="testimonial-image">
+          <div class="demo-placeholder" style="height: 300px">
+            Testimonial or Hero Image
+          </div>
+        </div>
+      </section>
+
+      <!-- Code Examples Section -->
+      <section class="showcase-section">
+        <h2>Code Examples</h2>
+        <p>Common CSS patterns and how to use them in your HTML.</p>
+
+        <h3>Button Usage</h3>
+        <pre><code>&lt;button class="button"&gt;Primary Button&lt;/button&gt;
+&lt;button class="button button--secondary"&gt;Secondary Button&lt;/button&gt;</code></pre>
+
+        <h3>Hero Banner Usage</h3>
+        <pre><code>&lt;div class="hero-banner"&gt;
+    &lt;div class="hero-content"&gt;
+        &lt;div class="hero-text"&gt;
+            &lt;h1&gt;Title&lt;/h1&gt;
+            &lt;p&gt;Description&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="hero-image"&gt;&lt;img src="..." /&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Section with Subsections</h3>
+        <pre><code>&lt;div class="section"&gt;
+    &lt;div class="sub-section"&gt;
+        &lt;h3&gt;Title&lt;/h3&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- repeat for more subsections --&gt;
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <!-- Responsive Design Section -->
+      <section class="showcase-section">
+        <h2>Responsive Breakpoints</h2>
+        <p>
+          The CSS includes responsive design rules for different screen sizes:
+        </p>
+
+        <div class="section">
+          <div class="sub-section">
+            <h3>📱 Mobile</h3>
+            <p><strong>Max Width: 768px</strong></p>
+            <p>
+              Single-column layouts, stacked content, optimized touch targets,
+              larger fonts
+            </p>
+          </div>
+          <div class="sub-section">
+            <h3>📱 Tablet</h3>
+            <p><strong>768px - 968px</strong></p>
+            <p>Two-column layouts, adjusted spacing, flexible imagery</p>
+          </div>
+          <div class="sub-section">
+            <h3>🖥️ Desktop</h3>
+            <p><strong>968px+</strong></p>
+            <p>
+              Full three-column layouts, side-by-side content, maximum content
+              width at 1440px
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Zero Trust Assessment - Custom CSS Showcase</p>
+        <p>
+          Built with CSS variables, Flexbox, and responsive design principles
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
