@@ -22,16 +22,17 @@
 
 function Test-Assessment-25375 {
     [ZtTest(
-        Category = 'Global Secure Access',
-        ImplementationCost = 'Low',
-        MinimumLicense = ('Entra_Premium_Internet_Access', 'Entra_Premium_Private_Access'),
-        Pillar = 'Network',
-        RiskLevel = 'High',
-        SfiPillar = 'Protect networks',
-        TenantType = ('Workforce'),
-        TestId = 25375,
-        Title = 'GSA Licenses are available in the tenant and assigned to users',
-        UserImpact = 'Low'
+    	Category = 'Global Secure Access',
+    	ImplementationCost = 'Low',
+    	MinimumLicense = ('Entra_Premium_Internet_Access','Entra_Premium_Private_Access'),
+    	CompatibleLicense = ('Entra_Premium_Internet_Access','Entra_Premium_Private_Access'),
+    	Pillar = 'Network',
+    	RiskLevel = 'High',
+    	SfiPillar = 'Protect networks',
+    	TenantType = ('Workforce'),
+    	TestId = 25375,
+    	Title = 'Global Secure Access licenses are available in the tenant and assigned to users',
+    	UserImpact = 'Low'
     )]
     [CmdletBinding()]
     param(

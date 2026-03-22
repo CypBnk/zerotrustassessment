@@ -15,7 +15,8 @@ function Test-Assessment-35021 {
     [ZtTest(
         Category = 'Information Protection',
         ImplementationCost = 'Medium',
-        MinimumLicense = ('Microsoft 365 E5'),
+        Service = ('SecurityCompliance'),
+        CompatibleLicense = ('EXCHANGE_S_ENTERPRISE'),
         Pillar = 'Data',
         RiskLevel = 'High',
         SfiPillar = 'Protect tenants and production systems',
